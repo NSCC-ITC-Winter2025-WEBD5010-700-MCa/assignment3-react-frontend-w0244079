@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const SidebarItem = ({ href, label, isCollapsed, icon }) => {
   const location = useLocation();
-  const isActive = location.pathname === href;
+  const isActive = location.pathname.startsWith(href); // /admin/books
 
   return (
     <li className="group">
