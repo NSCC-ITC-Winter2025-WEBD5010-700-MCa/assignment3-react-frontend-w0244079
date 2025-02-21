@@ -18,7 +18,7 @@ function BookEdit(){
 
     useEffect(() => {
         console.log(data)
-        // pre-populate the form
+        // pre-populate the form if data present
         if(data){
             setValue('title', data.title)
             setValue('author', data.author)
