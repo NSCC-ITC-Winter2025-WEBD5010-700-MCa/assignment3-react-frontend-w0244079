@@ -1,4 +1,3 @@
-import { useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
 import BookForm from './BookForm';
@@ -32,12 +31,6 @@ function BookEdit(){
         navigate('/admin/books')
       }
     })
-
-    useEffect(() => {
-        console.log(data)
-
-    }, [data])
-
 
     const processData = (data) => {
       editBookMutation.mutate(data);
