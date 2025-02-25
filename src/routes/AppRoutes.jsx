@@ -9,6 +9,11 @@ import Subscriptions from '../pages/Subscriptions';
 import Books from '../pages/Books';
 import BookCreate from '../components/books/BookCreate';
 import BookEdit from '../components/books/BookEdit';
+import Robots from '../pages/Robots';
+import RobotCreate from '../components/robots/RobotCreate';
+import RobotEdit from '../components/robots/RobotEdit';
+
+
 
 const router = createBrowserRouter([
   {
@@ -54,6 +59,20 @@ const router = createBrowserRouter([
           {
             path: ':id/edit',
             element: <BookEdit /> 
+          }
+        ]
+      },
+      {
+        path: 'robots',
+        element: <Robots />,
+        children: [
+          {
+            path: 'create',
+            element: <RobotCreate />
+          },
+          {
+            path: ':id/edit',
+            element: <RobotEdit /> 
           }
         ]
       },

@@ -8,7 +8,8 @@ import {
   faBoxOpen,
   faArrowLeft,
   faArrowRight,
-  faBook
+  faBook,
+  faRobot
 } from '@fortawesome/free-solid-svg-icons';
 import SidebarItem from './SidebarItem';
 
@@ -20,7 +21,8 @@ const Sidebar = ({ isCollapsed, toggleSidebar }) => {
     { href: '/admin/customers', label: 'Customers', icon: faUsers },
     { href: '/admin/auto-response', label: 'Auto Response', icon: faReply },
     { href: '/admin/subscriptions', label: 'Subscriptions', icon: faBoxOpen },
-    { href: '/admin/books', label: 'Books', icon: faBook}
+    { href: '/admin/books', label: 'Books', icon: faBook},
+    { href: '/admin/robots', label: 'Robots', icon: faRobot},
   ];
 
   return (
