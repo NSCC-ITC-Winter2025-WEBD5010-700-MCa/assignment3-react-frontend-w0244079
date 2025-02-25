@@ -11,7 +11,7 @@ const Robots = () => {
   const { isPending, error, data } = useQuery({
     queryKey: ['robotsData'],
     queryFn: async () => {
-      const response = await fetch('http://localhost:5000/api/robots')
+      const response = await fetch(`${import.meta.env.VITE_ROBOTS_API_URL}`)
       return response.json() //returns a promise of our data
     },
     staleTime: Infinity

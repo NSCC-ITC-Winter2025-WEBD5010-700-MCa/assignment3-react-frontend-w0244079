@@ -11,14 +11,14 @@ function RobotEdit(){
         queryKey: ['robots', id],
         queryFn: async () => {
             console.log('test')
-            const response = await fetch(`http://localhost:5000/api/robots/${id}`);
+            const response = await fetch(`${import.meta.env.VITE_ROBOTS_API_URL}/${id}`);
             return response.json()
         }
     })
 
     const editRobotMutation = useMutation({
       mutationFn: async (data) => {
-        const response = await fetch(`http://localhost:5000/api/robots/${id}`, {
+        const response = await fetch(`${import.meta.env.VITE_ROBOTS_API_URL}/${id}`, {
           method: 'PATCH',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify(data)

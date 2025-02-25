@@ -8,7 +8,7 @@ function RobotsTable({ robots }) {
 
     const deleteRobotMutation = useMutation({
         mutationFn: async (robotId) => {
-            const response = await fetch(`http://localhost:5000/robots/${robotId}`, {
+            const response = await fetch(`${import.meta.env.VITE_ROBOTS_API_URL}/${robotId}`, {
                 method: 'DELETE'
             })
             return response.json()
