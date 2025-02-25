@@ -38,7 +38,7 @@ function RobotEdit(){
 
     return (
       <div className="max-w-lg mx-auto bg-white shadow-md rounded-lg p-6">
-        <h2 className="text-2xl font-bold mb-4 text-gray-800">Edit Robot - Id: {data?.id}</h2>
+        <h2 className="text-2xl font-bold mb-4 text-gray-800">Edit Robot - Id: {data?._id}</h2>
         <RobotForm onDataCollected={processData} initialData={data} />
       </div>
     )
